@@ -17,3 +17,10 @@ usersById = {
   pete: {id: 'pete', name: "Pete Peterson", age: 31},
 }
 */
+
+function groupById(array) {
+    return array.reduce((obj, value) => {
+        obj[value.id] = value;
+        return obj;
+    }, {})
+}
