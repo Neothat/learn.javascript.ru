@@ -1,5 +1,12 @@
 'use strict';
 
+// ### task 1 begin
+function findMin(a, b) {
+    return a < b ? a : b;
+}
+// ### task 1 end
+
+// ### task 2 begin
 function makePow(a, b) {
     for (; b > 1; b--) {
         a *= a;
@@ -15,3 +22,4 @@ if (n < 1) {
 } else {
     alert(makePow(x, n));
 }
+// ### task 2 end
