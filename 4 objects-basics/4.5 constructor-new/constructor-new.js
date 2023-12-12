@@ -1,26 +1,25 @@
 'use strict'
 
+// ### Функция-конструктор
 function User(name) {
-    // this = {};  (неявно)
-    // добавляет свойства к this
     this.name = name;
     this.isAdmin = false;
-    // return this;  (неявно)
 }
 let user = new User("Jack");
 alert(user.name); // Jack
 alert(user.isAdmin); // false
 
-// создаём функцию и сразу же вызываем её с помощью new
-let user2 = new function () {
+let functionConstructorUser = new function () {
     this.name = "John";
     this.isAdmin = false;
+
     // ...другой код для создания пользователя
     // возможна любая сложная логика и инструкции
     // локальные переменные и так далее
 };
-// такой конструктор не может быть вызван снова, так как он нигде не сохраняется
+// ###
 
+// ### Возврат значения из конструктора, return
 function BigUser() {
     this.name = "John";
     return { name: "Godzilla" };  // <-- возвращает этот объект
@@ -32,7 +31,9 @@ function SmallUser() {
     return; // <-- возвращает this
 }
 alert(new SmallUser().name);  // John
+// ###
 
+// ### Создание методов в конструкторе
 function User(name) {
     this.name = name;
     this.sayHi = function () {
@@ -47,3 +48,4 @@ john = {
    sayHi: function() { ... }
 }
 */
+// ###
