@@ -1,5 +1,6 @@
 'use strict'
 
+// ### Сравнение по ссылке
 let a = {};
 let b = a; // копирование по ссылке
 alert(a == b); // true, обе переменные ссылаются на один и тот же объект
@@ -23,7 +24,9 @@ for (let key in user) {
 // теперь clone это полностью независимый объект с тем же содержимым
 clone.name = "Pete"; // изменим в нём данные
 alert(user.name); // все ещё John в первоначальном объекте
+// ###
 
+// ### Клонирование и объединение, Object.assign
 let user2 = { name: "John" };
 let permissions1 = { canView: true };
 let permissions2 = { canEdit: true };
@@ -40,3 +43,4 @@ let user4 = {
     age: 30
 };
 let clone = Object.assign({}, user); // простое клонирование
+// ###

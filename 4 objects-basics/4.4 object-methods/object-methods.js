@@ -1,5 +1,6 @@
 'use strict'
 
+// ### Примеры методов
 let user = {
     name: "John",
     age: 30,
@@ -10,7 +11,9 @@ let user = {
 
 };
 user.sayHi(); // John
+// ###
 
+// ### Ключевое слово this («this» не является фиксированным)
 let user2 = { name: "John" };
 let admin = { name: "Admin" };
 function sayHi() {
@@ -24,7 +27,9 @@ admin.f = sayHi;
 user2.f(); // John  (this == user)
 admin.f(); // Admin  (this == admin)
 admin['f'](); // Admin (нет разницы между использованием точки или квадратных скобок для доступа к объекту)
+// ###
 
+// ### У стрелочных функций нет «this»
 let user3 = {
     firstName: "Ilya",
     sayHi() {
@@ -33,3 +38,4 @@ let user3 = {
     }
 };
 user3.sayHi(); // Ilya
+// ###
